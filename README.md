@@ -20,3 +20,10 @@ Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, wie z. B.:
 
 ## Ordnerstruktur
 
+data/ # GIS-Daten (roh & verarbeitet)
+ontologies/ # OWL/Ontologien
+notebooks/ # Jupyter-Notebooks (Analyse, SPARQL)
+scripts/ # Python-Skripte für ETL & Abfragen
+app/ # Streamlit/Dash-App
+docs/ # Technische Dokumentation
+docker/ # Docker-Configs (PostGIS, GraphDB, Jupyter)
