@@ -2,6 +2,11 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Repo Size](https://img.shields.io/github/repo-size/FrankFreibothe/agro-geokg)
 
+
+## Beispielkarte
+
+![NDVI Map](docs/ndvi_map_example.png)
+
 "# agro-geokg" 
 
 
