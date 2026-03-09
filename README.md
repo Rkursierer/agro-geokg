@@ -1,3 +1,7 @@
+![Python Version](https://img.shields.io/badge/python-3.13-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Repo Size](https://img.shields.io/github/repo-size/FrankFreibothe/agro-geokg)
+
 "# agro-geokg" 
 
 
