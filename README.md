@@ -3,36 +3,80 @@
 ![Repo Size](https://img.shields.io/github/repo-size/FrankFreibothe/agro-geokg)
 
 
+# agro-geokg
+
+## DEUTSCH
+
+Wissensgraph-gestützte Planung und Analyse landwirtschaftlicher Infrastrukturen
+
+Dieses Projekt ist ein Prototyp, der **räumliche Daten (Felder, OSM-Wege, NDVI-Raster) mit semantischem Wissen** verbindet.  
+Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
+
+- Welche Wege liegen innerhalb bestimmter Testgebiete?
+- Mittlerer NDVI auf landwirtschaftlichen Flächen?
+- Welche Flächen liegen innerhalb bestimmter Gebiete?
+
+---
+
 ## Beispielkarte
 
 ![NDVI Map](docs/ndvi_map_example.png)
 
-"# agro-geokg" 
-
-
-
-**Wissensgraph-gestützte Planung und Analyse landwirtschaftlicher Infrastrukturen**
-
-Dieses Projekt ist ein Prototyp, der **räumliche Daten** (z. B. Felder, Wege, Glasfasertrassen, Sensorstandorte) mit **semantischem Wissen** verbindet.  
-Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, wie z. B.:
-
-- Welche Felder sind weiter als 200 m von der nächsten Glasfaserleitung entfernt?
-- Welche Sensoren messen Bodenfeuchte auf Feldern mit Maisbestand und lehmigem Boden?
-- Welche Leitungstrassen kreuzen Naturschutzgebiete oder feuchte Böden?
+---
 
 ## Komponenten
-- **Datenhaltung:** PostGIS, GraphDB oder Blazegraph  
-- **Ontologien:** GeoSPARQL, AGROVOC, eigene Domänenontologie  
-- **Integration:** Python (RDFLib, GeoPandas, GDAL)  
-- **Abfragen:** SPARQL (GeoSPARQL), ggf. kombiniert mit SQL  
-- **Visualisierung:** QGIS, Streamlit/Dash, Leaflet  
+
+- **Datenhaltung:** GeoJSON, Rasterdaten, RDF/Turtle, Blazegraph
+- **Ontologien:** eigene OWL-Domänenontologie, SKOS-Konzepte
+- **Integration:** Python (GeoPandas, rasterio, RDFLib, Folium)
+- **Abfragen:** SPARQL, GeoSPARQL
+- **Visualisierung:** Folium, Matplotlib, Jupyter Notebooks
+
+---
 
 ## Ordnerstruktur
 
-data/ # GIS-Daten (roh & verarbeitet)
-ontologies/ # OWL/Ontologien
-notebooks/ # Jupyter-Notebooks (Analyse, SPARQL)
-scripts/ # Python-Skripte für ETL & Abfragen
-app/ # Streamlit/Dash-App
-docs/ # Technische Dokumentation
-docker/ # Docker-Configs (PostGIS, GraphDB, Jupyter)
+- `data/` → GIS-Daten (roh & verarbeitet)  
+- `ontology/` → OWL Ontologie(n)  
+- `notebooks/` → Jupyter-Notebooks (NDVI, RDF, Visualisierung)  
+- `scripts/` → Python-Skripte für ETL & SPARQL-Abfragen  
+- `docs/` → Screenshots & technische Dokumentation  
+
+---
+
+## ENGLISH
+
+Knowledge Graph–based Planning and Analysis of Agricultural Infrastructure
+
+This project is a prototype that **links spatial data (fields, OSM roads, NDVI raster) with semantic knowledge**.  
+The goal is to enable complex spatial-semantic queries, e.g.:
+
+- Which roads are located within specific test areas?
+- Average NDVI of agricultural plots
+- Which areas lie within defined zones?
+
+---
+
+## Example Map
+
+![NDVI Map](docs/ndvi_map_example.png)
+
+---
+
+## Components
+
+- **Data storage:** GeoJSON, raster data, RDF/Turtle, Blazegraph
+- **Ontologies:** custom OWL domain ontology, SKOS concepts
+- **Integration:** Python (GeoPandas, rasterio, RDFLib, Folium)
+- **Queries:** SPARQL, GeoSPARQL
+- **Visualization:** Folium, Matplotlib, Jupyter Notebooks
+
+---
+
+## Folder Structure
+
+- `data/` → GIS data (raw & processed)  
+- `ontology/` → OWL ontology(ies)  
+- `notebooks/` → Jupyter notebooks (NDVI, RDF, visualization)  
+- `scripts/` → Python scripts for ETL & SPARQL queries  
+- `docs/` → screenshots & technical documentation
