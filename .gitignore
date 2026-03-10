@@ -1,1 +1,19 @@
-"data/" 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+venv/
+env/
+.venv/
+.ipynb_checkpoints/
+
+# Jupyter
+*.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Raster / große Dateien (optional)
+*.tif
