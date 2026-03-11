@@ -15,5 +15,4 @@ env/
 # VS Code
 .vscode/
 
-# Raster / große Dateien (optional)
-*.tif
+
