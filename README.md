@@ -42,6 +42,7 @@ Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
 - `scripts/` → Python-Skripte für ETL & SPARQL-Abfragen  
 - `docs/` → Screenshots & technische Dokumentation  
 
+
 ---
 
 ## ENGLISH
@@ -80,3 +81,24 @@ The goal is to enable complex spatial-semantic queries, e.g.:
 - `notebooks/` → Jupyter notebooks (NDVI, RDF, visualization)  
 - `scripts/` → Python scripts for ETL & SPARQL queries  
 - `docs/` → screenshots & technical documentation
+
+## Example Geospatial Workflow
+
+This repository also contains example geospatial analyses implemented in Python.
+
+### NDVI Field Analysis
+
+This notebook demonstrates a small geospatial workflow:
+
+1. Load agricultural field polygons and OSM road data  
+2. Calculate mean NDVI values for agricultural fields  
+3. Reproject raster data for web visualization  
+4. Create an interactive map using Folium
+
+### Workflow
+
+![Workflow](docs/workflow_diagram.png)
+
+### Example Output
+
+![NDVI Map](docs/map_preview.png)
