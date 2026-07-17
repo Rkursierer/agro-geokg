@@ -59,10 +59,8 @@ Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
 - GeoPandas
 - Rasterio
 - RDFLib
-- Blazegraph
 - GeoSPARQL
 - SPARQL
-- OWL
 - SKOS
 - Folium
 - Jupyter Notebook
@@ -99,7 +97,9 @@ The resulting Knowledge Graph enables:
 - enrichment of spatial objects with NDVI information
 - interactive visualization of analysis results
 
-```
+---
+---
+
 ## ENGLISH
 
 Knowledge Graph–based Planning and Analysis of Agricultural Infrastructure
