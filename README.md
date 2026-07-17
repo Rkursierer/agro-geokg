@@ -17,6 +17,14 @@ Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
 - Welche Flächen liegen innerhalb bestimmter Gebiete?
 
 ---
+## Features
+
+- Integration von GeoJSON-, Raster- und RDF-Daten
+- Erstellung eines semantischen Knowledge Graphs
+- Berechnung mittlerer NDVI-Werte je Landwirtschaftsfläche
+- Verknüpfung räumlicher und semantischer Informationen
+- SPARQL- und GeoSPARQL-Abfragen
+- Interaktive Visualisierung mit Folium
 
 ## Beispielkarte
 
@@ -34,17 +42,64 @@ Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
 
 ---
 
-## Ordnerstruktur
+## Jupyter Notebooks
 
-- `data/` → GIS-Daten (roh & verarbeitet)  
-- `ontology/` → OWL Ontologie(n)  
-- `notebooks/` → Jupyter-Notebooks (NDVI, RDF, Visualisierung)  
-- `scripts/` → Python-Skripte für ETL & SPARQL-Abfragen  
-- `docs/` → Screenshots & technische Dokumentation  
+| Notebook | Description |
+|----------|-------------|
+| 01 | NDVI analysis and visualization |
+| 02 | Convert agricultural polygons to RDF |
+| 03 | Convert OSM road network to RDF |
+| 04 | Convert test area to RDF |
+| 05 | Merge RDF datasets into one Knowledge Graph |
+| 06 | Execute SPARQL queries |
+---
+## Technologies
 
-
+- Python
+- GeoPandas
+- Rasterio
+- RDFLib
+- Blazegraph
+- GeoSPARQL
+- SPARQL
+- OWL
+- SKOS
+- Folium
+- Jupyter Notebook
 ---
 
+GeoJSON
+        \
+Raster -----> Python -----> RDF -----> Blazegraph
+        /                     |
+OSM --------------------------+
+                              |
+                           SPARQL
+                              |
+                         Folium Maps
+---
+## Example SPARQL Query
+
+```sparql
+SELECT ?field ?ndvi
+WHERE {
+    ?field rdf:type agro:AgriculturalArea .
+    ?field agro:meanNDVI ?ndvi .
+}
+ORDER BY DESC(?ndvi)
+```
+## Results
+
+The prototype demonstrates how geospatial and semantic technologies can be combined to support spatial decision making.
+
+The resulting Knowledge Graph enables:
+
+- semantic querying with SPARQL
+- integration of heterogeneous geospatial data
+- enrichment of spatial objects with NDVI information
+- interactive visualization of analysis results
+
+```
 ## ENGLISH
 
 Knowledge Graph–based Planning and Analysis of Agricultural Infrastructure
