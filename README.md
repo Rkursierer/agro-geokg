@@ -3,42 +3,56 @@
 ![Repo Size](https://img.shields.io/github/repo-size/FrankFreibothe/agro-geokg)
 
 
-# agro-geokg
+# agro-geokg: End-to-end geospatial Knowledge Graph workflow from raw GIS data to semantic querying using Python and RDF.
 
-## DEUTSCH
 
-Wissensgraph-gestützte Planung und Analyse landwirtschaftlicher Infrastrukturen
 
-Dieses Projekt ist ein Prototyp, der **räumliche Daten (Felder, OSM-Wege, NDVI-Raster) mit semantischem Wissen** verbindet.  
-Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
+Knowledge Graph–based Planning and Analysis of Agricultural Infrastructure
 
-- Welche Wege liegen innerhalb bestimmter Testgebiete?
-- Mittlerer NDVI auf landwirtschaftlichen Flächen?
-- Welche Flächen liegen innerhalb bestimmter Gebiete?
+This project is a prototype that **links spatial data (fields, OSM roads, NDVI raster) with semantic knowledge**.  
+The goal is to enable complex spatial-semantic queries, e.g.:
+
+- Which roads are located within specific test areas?
+- Average NDVI of agricultural plots
+- Which areas lie within defined zones?
+
+The workflow starts with raw geospatial datasets, enriches them with NDVI information, converts them into RDF, and enables semantic querying using SPARQL.
 
 ---
 ## Features
 
-- Integration von GeoJSON-, Raster- und RDF-Daten
-- Erstellung eines semantischen Knowledge Graphs
-- Berechnung mittlerer NDVI-Werte je Landwirtschaftsfläche
-- Verknüpfung räumlicher und semantischer Informationen
-- SPARQL- und GeoSPARQL-Abfragen
-- Interaktive Visualisierung mit Folium
+- Integration of GeoJSON, raster, and RDF data
 
-## Beispielkarte
+- Creation of a semantic knowledge graph
+- Calculation of average NDVI values per agriculture area
+- Linking of spatial and semantic information
+
+- SPARQL and GeoSPARQL queries
+
+- Interactive visualization with Folium
+---
+## Example Geospatial Analysis
 
 ![NDVI Map](docs/ndvi_map_example.png)
+![NDVI Map](docs/map_preview.png)
+![NDVI Map](docs/graph_example.png)
 
 ---
+---
+## Example final knowledge Graph
 
-## Komponenten
+---
+---
+## Components
 
-- **Datenhaltung:** GeoJSON, Rasterdaten, RDF/Turtle, Blazegraph
-- **Ontologien:** eigene OWL-Domänenontologie, SKOS-Konzepte
-- **Integration:** Python (GeoPandas, rasterio, RDFLib, Folium)
-- **Abfragen:** SPARQL, GeoSPARQL
-- **Visualisierung:** Folium, Matplotlib, Jupyter Notebooks
+- **Data Storage:** GeoJSON, Raster Data, RDF/Turtle
+- **Ontologies:** Custom OWL Domain Ontology, SKOS Concepts
+
+- **Integration:** Python (GeoPandas, Rasterio, RDFLib, Folium)
+
+- **Querying:** SPARQL, GeoSPARQL
+
+- **Visualization:** Folium, Matplotlib, Jupyter Notebooks
 
 ---
 
@@ -51,24 +65,15 @@ Ziel ist es, komplexe räumlich-semantische Abfragen zu ermöglichen, z. B.:
 | 03 | Convert OSM road network to RDF |
 | 04 | Convert test area to RDF |
 | 05 | Merge RDF datasets into one Knowledge Graph |
-| 06 | Execute SPARQL queries |
+| 06 | Enrich agricultural RDF with triples containing NDVI information |
+| 07 | Execute SPARQL queries |
 ---
-## Technologies
 
-- Python
-- GeoPandas
-- Rasterio
-- RDFLib
-- GeoSPARQL
-- SPARQL
-- SKOS
-- Folium
-- Jupyter Notebook
 ---
 
 GeoJSON
         \
-Raster -----> Python -----> RDF -----> Blazegraph
+Raster -----> Python -----> RDF 
         /                     |
 OSM --------------------------+
                               |
@@ -98,37 +103,8 @@ The resulting Knowledge Graph enables:
 - interactive visualization of analysis results
 
 ---
----
-
-## ENGLISH
-
-Knowledge Graph–based Planning and Analysis of Agricultural Infrastructure
-
-This project is a prototype that **links spatial data (fields, OSM roads, NDVI raster) with semantic knowledge**.  
-The goal is to enable complex spatial-semantic queries, e.g.:
-
-- Which roads are located within specific test areas?
-- Average NDVI of agricultural plots
-- Which areas lie within defined zones?
 
 ---
-
-## Example Map
-
-![NDVI Map](docs/ndvi_map_example.png)
-
----
-
-## Components
-
-- **Data storage:** GeoJSON, raster data, RDF/Turtle, Blazegraph
-- **Ontologies:** custom OWL domain ontology, SKOS concepts
-- **Integration:** Python (GeoPandas, rasterio, RDFLib, Folium)
-- **Queries:** SPARQL, GeoSPARQL
-- **Visualization:** Folium, Matplotlib, Jupyter Notebooks
-
----
-
 ## Folder Structure
 
 - `data/` → GIS data (raw & processed)  
@@ -136,24 +112,11 @@ The goal is to enable complex spatial-semantic queries, e.g.:
 - `notebooks/` → Jupyter notebooks (NDVI, RDF, visualization)  
 - `scripts/` → Python scripts for ETL & SPARQL queries  
 - `docs/` → screenshots & technical documentation
+---
 
-## Example Geospatial Workflow
 
-This repository also contains example geospatial analyses implemented in Python.
 
-### NDVI Field Analysis
+---
 
-This notebook demonstrates a small geospatial workflow:
 
-1. Load agricultural field polygons and OSM road data  
-2. Calculate mean NDVI values for agricultural fields  
-3. Reproject raster data for web visualization  
-4. Create an interactive map using Folium
 
-### Workflow
-
-![Workflow](docs/workflow_diagram.png)
-
-### Example Output
-
-![NDVI Map](docs/map_preview.png)
