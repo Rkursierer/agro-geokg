@@ -33,14 +33,19 @@ The workflow starts with raw geospatial datasets, enriches them with NDVI inform
 ---
 ## Example Geospatial Analysis
 
-![NDVI Map](docs/ndvi_map_example.png)
+
 ![NDVI Map](docs/map_preview.png)
-![NDVI Map](docs/graph_example.png)
+*Bildunterschrift hier*
+
 
 ---
 ---
 ## Example final knowledge Graph
 
+After integrating the RDF triples generated from vector and raster datasets, a consolidated knowledge graph was created in Turtle format. The following excerpt illustrates the definition of an ontology class and one of its instances. The graph visualization highlights the semantic relationships between the resources.
+        
+![NDVI Map](docs/graph_example.png)
+*Bildunterschrift hier*
 ---
 ---
 ## Components
