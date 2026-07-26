@@ -40,13 +40,17 @@ The workflow starts with raw geospatial datasets, enriches them with NDVI inform
 
 ---
 ---
-## Example final knowledge Graph
+## Consolidated RDF knowledge graph
 
 After integrating the RDF triples generated from vector and raster datasets, a consolidated knowledge graph was created in Turtle format. The following excerpt illustrates the definition of an ontology class and one of its instances. The graph visualization highlights the semantic relationships between the resources.
-        
+
+![NDVI Map](docs/example_rdf.png)
+*Figure 1: Excerpt from the generated RDF knowledge graph in Turtle format. The ontology class agro:AgriculturalArea is defined first, followed by the instance agro:agriculture_1. Besides its class membership (rdf:type), the resource contains semantic and spatial properties, including its geometry (geo:hasGeometry), spatial relation to the study area (geo:sfWithin), area size, data source, and the calculated mean NDVI value.*
+
+
 ![NDVI Map](docs/graph_example.png)
-*Bildunterschrift hier*
----
+*Figure 2: Visualization of the RDF knowledge graph. The graph illustrates the distinction between the ontology (schema) and the instance (data) level. agro:AgriculturalArea is defined as an ontology class (rdf:type rdfs:Class), while agro:agriculture_1 is modeled as an instance of this class. Additional relationships connect the resource to its geometry, study area, and descriptive attributes.*
+
 ---
 ## Components
 
