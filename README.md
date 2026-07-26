@@ -80,15 +80,9 @@ After integrating the RDF triples generated from vector and raster datasets, a c
 
 ---
 
-GeoJSON
-        \
-Raster -----> Python -----> RDF 
-        /                     |
-OSM --------------------------+
-                              |
-                           SPARQL
-                              |
-                         Folium Maps
+## Workflow
+
+---
 ---
 ## Example SPARQL Query
 
